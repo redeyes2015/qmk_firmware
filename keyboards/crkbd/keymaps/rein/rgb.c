@@ -1,5 +1,16 @@
 #include QMK_KEYBOARD_H
 
+uint16_t get_tapping_term(uint16_t keycode) {
+    switch (keycode) {
+        case LCTL_T(KC_SPC):
+            return 180;
+        case LT(4,KC_TAB):
+            return 150;
+        default:
+            return TAPPING_TERM;
+    }
+}
+
 #ifdef RGBLIGHT_ENABLE
 
 #define HSV_BLACK 0,0,0
