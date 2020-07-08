@@ -2,6 +2,12 @@
 
 uint16_t get_tapping_term(uint16_t keycode) {
     switch (keycode) {
+        case OSL(5):
+        case OSM(MOD_LSFT):
+        case OSM(MOD_LCTL):
+        case OSM(MOD_LALT):
+        case OSM(MOD_LGUI):
+            return 1000;
         case LCTL_T(KC_SPC):
             return 180;
         case LT(4,KC_TAB):
