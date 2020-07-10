@@ -2,7 +2,7 @@
 
 uint16_t get_tapping_term(uint16_t keycode) {
     switch (keycode) {
-        case OSL(5):
+        case OSL(6):
         case OSM(MOD_LSFT):
         case OSM(MOD_LCTL):
         case OSM(MOD_LALT):
@@ -33,19 +33,19 @@ void keyboard_post_init_user(void) {
 
 layer_state_t layer_state_set_user(layer_state_t state) {
     switch (get_highest_layer(state)) {
-        case 1:
+        case 2:
             HSV_SET_THUMB(HSV_RED);
             break;
-        case 2:
+        case 3:
             HSV_SET_THUMB(HSV_YELLOW);
             break;
-        case 3:
+        case 4:
             HSV_SET_THUMB(HSV_CYAN);
             break;
-        case 4:
+        case 5:
             HSV_SET_THUMB(HSV_PURPLE);
             break;
-        case 5:
+        case 6:
             HSV_SET_THUMB(HSV_BLUE);
             break;
         default:
